@@ -27,3 +27,58 @@
     </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        Input 1:
+        <input id="number1" type="text">
+        <br>
+        Input 2:
+        <input id="number2" type="text">
+        <br>
+        <button>Calculate</button>
+        <br>
+        <input type="text">
+        <script>
+        $(function(){
+                  $('#calculate').click(function(){
+                      var n1 = $('#number1').val();
+                      var n2 = $('#number').val();
+                      var r = n1 * n2;
+                      $('#total').val(total);
+                  });
+        });
+        </script>
+        <div class="col-md-12">
+            <div id="myfigure" class="chart">
+                <div class="bar-block" style="height:20px"; left:10px"> 20 </div>
+                <div class="bar-block" style="height:40px"; left:55x"> 40 </div>
+                <div class="bar-block" style="height:60px"; left:90px"> 60 </div>
+                <div class="bar-block" style="height:80px"; left:130px"> 80 </div>
+                <div class="bar-block" style="height:100px"; left:170px">100 </div>
+                <div class="bar-block" style="height:120px"; left:210px"> 120 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="add" class="btn btn-primary"> ADD </button>
+                </div>
+            </div>
+            <script>
+           
+                    $(function() {
+                        $('#add').click(function() {
+                            $('.bar-block').map(function() {
+                                $(this).text($(this).text() * 1 + 5);
+                                var height_px = $(this).css('height');
+                                var height = height_px.substr(0, height_px.length - 2);
+                                $(this).css('height', (height * 1 + 5) + 'px');
+                            });
+                        });
+                    });
+                
+            </script>
+    </body>
+</html>
