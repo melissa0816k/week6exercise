@@ -7,6 +7,7 @@
         Input 1:
         <input id="number1" type="text">
         <br>
+        Input 2:
         <input id="number2" type="text">
         <br>
         <button>Calculate</button>
@@ -14,13 +15,11 @@
         <input type="text">
         <script>
         $(function(){
-                  $('#go').click(function(){
+                  $('#calculate').click(function(){
                       var n1 = $('#number1').val();
                       var n2 = $('#number').val();
-                      console.log(n1);
                       var r = n1 * n2;
-                      console.log(r);
-                      $('#result').val(r);
+                      $('#total').val(total);
                   });
         });
         </script>
